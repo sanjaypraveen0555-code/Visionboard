@@ -60,29 +60,78 @@
 </head>
 <body>
 <div class="card">
+
     <div class="step active" id="step1">
-        <h2>Hi Swathie Let’s begin this vision board session gently</h2>
-        <p>A moment from this year you want to keep</p>
-        <input id="a1" placeholder="Type here…" />
+        <h2>Hi Swathie</h2>
+        <p style="margin-bottom: 20px;">
+            Before we think about what’s ahead,  
+            I just wanted you to have a quiet moment for yourself.  
+            Nothing to perform. Nothing to fix.
+        </p>
+
+        <p>
+            What is one moment from this year  
+            that you’d like to gently hold onto?
+        </p>
+
+        <input id="a1" placeholder="You can type anything that feels right…" />
+        <p style="font-size:14px; opacity:0.7; margin-top:8px;">
+            There’s no right answer — just whatever comes to you.
+        </p>
+
         <button onclick="nextStep(1)">Next</button>
     </div>
+
     <div class="step" id="step2">
-        <h2>Going a little deeper</h2>
-        <p>Something that made you feel safe</p>
-        <input id="a2" placeholder="Type here…" />
+        <h2>Let’s slow down a little</h2>
+
+        <p>
+            At some point this year,  
+            there must have been something — or someone —  
+            that made you feel calm, steady, or safe.
+        </p>
+
+        <input id="a2" placeholder="Even something small counts…" />
+        <p style="font-size:14px; opacity:0.7; margin-top:8px;">
+            Sometimes the smallest moments matter the most.
+        </p>
+
         <button onclick="nextStep(2)">Next</button>
     </div>
+
     <div class="step" id="step3">
-        <h2>One last reflection</h2>
-        <p>Something you want more of in your life</p>
-        <input id="a3" placeholder="Type here…" />
+        <h2>Just one more thought</h2>
+
+        <p>
+            Looking ahead,  
+            what is something you quietly wish there was  
+            a little more of in your life?
+        </p>
+
+        <input id="a3" placeholder="You don’t have to overthink this…" />
+        <p style="font-size:14px; opacity:0.7; margin-top:8px;">
+            Whatever you feel is enough.
+        </p>
+
         <button onclick="nextStep(3)">Continue</button>
     </div>
+
     <div class="step" id="step4">
-        <h2>Thank you for sharing</h2>
-        <p>Now let’s look at the path you feel drawn to.</p>
+        <h2>Thank you for sharing that</h2>
+
+        <p>
+            These aren’t answers you owe anyone.  
+            They’re just little truths about you.
+        </p>
+
+        <p style="margin-top:15px;">
+            Now, let’s gently look at what kind of year  
+            you feel drawn towards next.
+        </p>
+
         <button onclick="finishFirstPage()">Go to my vision →</button>
     </div>
+
 </div>
 <script>
     function nextStep(n) {
@@ -100,3 +149,4 @@
 </script>
 </body>
 </html>
+
