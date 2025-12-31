@@ -62,7 +62,7 @@
 <div class="card">
 
     <div class="step active" id="step1">
-        <h2>Hi Swathie</h2>
+        <h2>Hi Swathie Welcome to vision board2025to26</h2>
         <p style="margin-bottom: 20px;">
             Before we think about what’s ahead,  
             I just wanted you to have a quiet moment for yourself.  
@@ -86,9 +86,7 @@
         <h2>Let’s slow down a little</h2>
 
         <p>
-            At some point this year,  
-            there must have been something — or someone —  
-            that made you feel calm, steady, or safe.
+            What is your most favourite restaurant for the year .
         </p>
 
         <input id="a2" placeholder="Even something small counts…" />
@@ -100,7 +98,7 @@
     </div>
 
     <div class="step" id="step3">
-        <h2>Just one more thought</h2>
+        <h2>One more small question</h2>
 
         <p>
             Looking ahead,  
@@ -115,8 +113,21 @@
 
         <button onclick="nextStep(3)">Continue</button>
     </div>
+   <div class="step" id="step4">
+        <h2>Just one more thought</h2>
 
-    <div class="step" id="step4">
+        <p>
+            What has been your most favourite song of the year 
+        </p>
+
+        <input id="a4" placeholder="You don’t have to overthink this…" />
+        <p style="font-size:14px; opacity:0.7; margin-top:8px;">
+            Whatever you feel is enough.
+        </p>
+
+        <button onclick="nextStep(4)">Continue</button>
+    </div>
+    <div class="step" id="step5">
         <h2>Thank you for sharing that</h2>
 
         <p>
@@ -144,9 +155,11 @@
         localStorage.setItem("memory", document.getElementById("a1").value);
         localStorage.setItem("safe", document.getElementById("a2").value);
         localStorage.setItem("more", document.getElementById("a3").value);
+        localStorage.setItem("more", document.getElementById("a4").value);
         window.location = "page2.html";
     }
 </script>
 </body>
 </html>
+
 
