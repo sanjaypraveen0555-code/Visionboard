@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Note for You</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ef;
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+h1 {
+    color: #4a3f35;
+}
+
+p {
+    font-size: 18px;
+    color: #3b332b;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 14px;
+    margin: 30px 0;
+}
+
+.reflection {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.signature {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+
+<script>
+if (localStorage.getItem("firstPageCompleted") !== "true") {
+    window.location = "index.html";
+}
+
+window.onload = function () {
+    document.getElementById("memory").innerText =
+        localStorage.getItem("memory") || "";
+    document.getElementById("safe").innerText =
+        localStorage.getItem("safe") || "";
+    document.getElementById("more").innerText =
+        localStorage.getItem("more") || "";
+};
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Thank you for doing this with me</h1>
+
+    <p>
+        I hope you have a wonderful year ahead —  
+        and I hope I get to be part of it with you.
+    </p>
+
+    <!-- image.jpg -->
+    <!-- Replace image.jpg with your photo file -->
+    <img src="image.jpg" alt="A memory of us">
+
+    <div class="reflection">
+        <p>
+            Here are a few things you carried with you from this year  
+            and things you want to hold onto again —  
+            make a small note of them, so you don’t forget:
+        </p>
+
+        <p><b>A moment you wanted to keep:</b><br>
+        <span id="memory"></span></p>
+
+        <p><b>Something that made you feel safe:</b><br>
+        <span id="safe"></span></p>
+
+        <p><b>Something you want more of:</b><br>
+        <span id="more"></span></p>
+    </div>
+
+    <div class="signature">
+        Lots of love,<br>
+        dear pookie ❤️
+    </div>
+
+</div>
+
+</body>
+</html>

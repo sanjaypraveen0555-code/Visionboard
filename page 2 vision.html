@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Vision Paths</title>
+
+<script>
+if (localStorage.getItem("firstPageCompleted") !== "true") {
+    window.location = "index.html";
+}
+</script>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #faf7f2;
+    text-align: center;
+    padding: 40px;
+}
+
+button {
+    padding: 12px 22px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #d9b99b;
+}
+
+#options, #result {
+    margin-top: 30px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Choose the path that feels right for you</h1>
+
+<button onclick="showPath('spiritual')">Spiritual Growth</button>
+<button onclick="showPath('physical')">Physical Well-Being</button>
+<button onclick="showPath('adventure')">Adventures & Memories</button>
+<button onclick="showPath('education')">Education & Study</button>
+<button onclick="showPath('relationship')">Relationship</button>
+
+<div id="options"></div>
+<div id="result"></div>
+
+<audio id="player"></audio>
+
+<script>
+function showPath(path) {
+    let html = "";
+
+    if (path === "spiritual") {
+        html = `
+        <h3>Spiritual Growth</h3>
+        <button onclick="choose('A')">Quiet Growth</button>
+        <button onclick="choose('B')">Deep Faith</button>
+        <button onclick="choose('C')">Gentle Healing</button>`;
+    }
+
+    if (path === "physical") {
+        html = `
+        <h3>Physical Well-Being</h3>
+        <button onclick="choose('D')">Strength & Energy</button>
+        <button onclick="choose('E')">Gentle Movement</button>
+        <button onclick="choose('F')">Rest & Recovery</button>`;
+    }
+
+    if (path === "adventure") {
+        html = `
+        <h3>Adventures & Memories</h3>
+        <button onclick="choose('G')">Return to a Loved Place</button>
+        <button onclick="choose('H')">Try Something New</button>
+        <button onclick="choose('I')">Create Memories Together</button>`;
+    }
+
+    if (path === "education") {
+        html = `
+        <h3>Education & Study</h3>
+        <button onclick="choose('J')">Focused Discipline</button>
+        <button onclick="choose('K')">Curious Learning</button>
+        <button onclick="choose('L')">Balanced Growth</button>`;
+    }
+
+    if (path === "relationship") {
+        html = `
+        <h3>Relationship</h3>
+        <button onclick="choose('M')">Emotional Safety</button>
+        <button onclick="choose('N')">Shared Growth</button>
+        <button onclick="choose('O')">Support & Partnership</button>`;
+    }
+
+    document.getElementById("options").innerHTML = html;
+    document.getElementById("result").innerHTML = "";
+}
+
+function choose(choice) {
+    let msg = "";
+    let song = "";
+
+    if (choice === "A") {
+        msg = "A year of calm strength and inner peace.";
+        song = "songs/songA.mp3";
+    }
+    if (choice === "B") {
+        msg = "A year of trust, faith, and surrender.";
+        song = "songs/songB.mp3";
+    }
+    if (choice === "C") {
+        msg = "A year of kindness, healing, and softness toward yourself.";
+        song = "songs/songC.mp3";
+    }
+
+    if (choice === "D") msg = "Building energy and confidence, step by step.";
+    if (choice === "E") msg = "Movement that feels loving, not forced.";
+    if (choice === "F") msg = "Honoring rest as a form of strength.";
+
+    if (choice === "G") msg = "Returning to places that feel like home.";
+    if (choice === "H") msg = "Welcoming new experiences with courage.";
+    if (choice === "I") msg = "Creating memories that last beyond photos.";
+
+    if (choice === "J") msg = "Focused effort bringing meaningful results.";
+    if (choice === "K") msg = "Learning driven by curiosity, not pressure.";
+    if (choice === "L") msg = "Growing steadily without burning out.";
+
+    if (choice === "M") msg = "A relationship that feels emotionally safe.";
+    if (choice === "N") msg = "Growing together, not apart.";
+    if (choice === "O") msg = "Standing by each other’s dreams.";
+
+    document.getElementById("result").innerHTML = `
+        <p>${msg}</p>
+        <button onclick="goFinal()">Carry this forward →</button>
+    `;
+
+    let p = document.getElementById("player");
+    p.src = song;
+    if (song) p.play();
+}
+
+function goFinal() {
+    window.location = "final.html";
+}
+</script>
+
+</body>
+</html>
