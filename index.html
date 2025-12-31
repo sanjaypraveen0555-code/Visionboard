@@ -145,21 +145,24 @@
 
 </div>
 <script>
-    function nextStep(n) {
-        document.getElementById("step" + n).classList.remove("active");
-        document.getElementById("step" + (n + 1)).classList.add("active");
-    }
+function nextStep(n) {
+    document.getElementById("step" + n).classList.remove("active");
+    document.getElementById("step" + (n + 1)).classList.add("active");
+}
 
-    function finishFirstPage() {
-        localStorage.setItem("firstPageCompleted", "true");
-        localStorage.setItem("memory", document.getElementById("a1").value);
-        localStorage.setItem("safe", document.getElementById("a2").value);
-        localStorage.setItem("more", document.getElementById("a3").value);
-        localStorage.setItem("more", document.getElementById("a4").value);
-        window.location = "page2.html";
-    }
+function finishFirstPage() {
+    localStorage.setItem("firstPageCompleted", "true");
+
+    localStorage.setItem("memory", document.getElementById("a1").value);
+    localStorage.setItem("restaurant", document.getElementById("a2").value);
+    localStorage.setItem("more", document.getElementById("a3").value);
+    localStorage.setItem("song", document.getElementById("a4").value);
+
+    window.location = "page2.html";
+}
 </script>
 </body>
 </html>
+
 
 
